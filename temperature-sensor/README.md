@@ -8,14 +8,14 @@ The function (in C-like code):
 ```
 double getTemperature();
 ```
-Returns a temperature reading from a temperature sensor.
+Returns a temperature reading from a temperature sensor placed in a fairly chaotic environment.
 You can asssume that the value has been read using an ADC with 12-bit resolution, with a reference voltage of 3.3V.
 The temperature sensor reports a temperature range of -50C to +50C and can be read every 100ms.
 For example the ADC can read the following values from the sensor:
 - 2048 (rougly 0C)
 - 3000 (rougly 23C)
 
-For the sake of this exercise, the ADC values will be provided in a text file `temperature.txt` with a single value on every line. 
+For the sake of this exercise, the ADC values will be provided in a text file `temperature.txt` with a single value on every line.
 
 ## Task
 Write an application that reads ADC output from the text file, converts it to temperature in celsius, and sends it to a HTTP REST endpoint. With the following requirements:
