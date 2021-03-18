@@ -75,6 +75,6 @@ The software exposes an API on the address `http://localhost:5000`.
 The endpoints mentioned further up in this doc receives temperature values, performs simple validation of the input, formats it, and stores it in a text file `output.txt` relative to the executable.
 The endpoints are setup to "randomly" fail and return status code 500.
 
-There are portable 64-bit binaries available in the `backend-bin` folder for Linux, Windows, and MacOS.
+There are portable 64-bit binaries available in the Releases tab for Linux, Windows, and MacOS.
 - For Windows: Extract the zip and run `backend.exe`
 - For Linux and Mac: Extract the zip and run `backend`
