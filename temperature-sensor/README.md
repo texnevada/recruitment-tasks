@@ -73,6 +73,13 @@ Upon failure, the last maximum 10 TemperatureMeasurement values should be sent t
 A piece of server side software is provided that is implemented using ASP.NET that can be used for testing.
 The software exposes an API on the address `http://localhost:5000`.
 The endpoints mentioned further up in this doc receives temperature values, performs simple validation of the input, formats it, and stores it in a text file `output.txt` relative to the executable.
+Example `output.txt`:
+```
+[2021-04-12T20:20:20.0000000Z-2021-04-12T20:22:20.0000000Z] max: 1.13 min: 1.11 avg: 1.12
+[2021-04-12T20:22:20.0000000Z-2021-04-12T20:24:20.0000000Z] max: 1.15 min: 1.11 avg: 1.13
+[2021-04-12T20:24:20.0000000Z-2021-04-12T20:26:20.0000000Z] max: 1.14 min: 1.12 avg: 1.13
+```
+
 The endpoints are setup to "randomly" fail and return status code 500.
 
 There are portable 64-bit binaries available in the Releases tab for Linux, Windows, and MacOS.
