@@ -3,7 +3,7 @@
 You're free to solve the task using whatever programming language you prefer, but I recommend that you choose a language you are comfortable with.
 Functional code should be delivered in a git repository with working commits.
 
-NOTE: The specification further down in this document defines a minimum set of requirements for the application.
+The specification further down in this document defines a minimum set of requirements for the application.
 
 ## Background
 The function (in C-like code):
