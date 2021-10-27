@@ -6,4 +6,4 @@ def read():
     with open("./temperature-sensor/temperature.txt") as sensor:
         for value in sensor:
             if random.randrange(10) == 8:
-                return value
+                return int(value)
