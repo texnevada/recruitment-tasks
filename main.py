@@ -4,13 +4,15 @@
 import time
 import Sensor.Read_Temperature as Sensor
 from Sensor.Calculate_12Bit_ADC import calculate
+import random
 start = time.perf_counter()
 
 
 def main():
-    value = Sensor.read()
-    temp = calculate(value)
-    print(temp)
+    while random.randrange(30):
+        value = Sensor.read()
+        temp = calculate(value)
+        print(f"{temp} Celsius")
 
 
 if __name__ == "__main__":
