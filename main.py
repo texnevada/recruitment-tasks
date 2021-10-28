@@ -45,7 +45,7 @@ def temperature_details(seconds: int):
     post(json)
 
 
-def main():
+def single_value_read():
     while random.randrange(30):
         value = Sensor.raw_read()
         temp = calculate(value)
