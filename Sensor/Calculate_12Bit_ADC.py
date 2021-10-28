@@ -2,6 +2,8 @@ import configparser
 
 
 def calculate(value):
+    # Putting the config parser in the function allows for changes in the config without
+    # having to reload the program
     config = configparser.ConfigParser()
     config.read("./config.ini")
     # 2048 = 0C
@@ -19,8 +21,8 @@ def calculate(value):
     fahrenheit = round((celsius * 1.8) + 32, 2)
     kelvin = round(273.15 + celsius, 2)
     # print(f"{math} Celsius")
-    print(f"\n{fahrenheit} Fahrenheit")
-    print(f"{kelvin} Kelvin")
+    # print(f"\n{fahrenheit} Fahrenheit")
+    # print(f"{kelvin} Kelvin")
     # print(f"{math} = {val1, val2}")
     if config["Sensor"]["Temperature"] == "Fahrenheit":
         math = fahrenheit
