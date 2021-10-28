@@ -19,8 +19,9 @@ def post(json: dict):
         if len(failed_attempts) == 10:
             del failed_attempts[-1]
         failed_attempts.append(json)
-    if failed_attempts[0] != json:
-        for entry in failed_attempts:
-            r2 = requests.post(fallback_url, json=entry)
-            if r2.status_code == "200":
-                failed_attempts.remove(entry)
+    if bool(failed_attempts):
+        if failed_attempts[0] != json:
+            for entry in failed_attempts:
+                r2 = requests.post(fallback_url, json=entry)
+                if r2.status_code == "200":
+                    failed_attempts.remove(entry)
