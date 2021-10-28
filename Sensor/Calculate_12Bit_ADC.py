@@ -1,7 +1,7 @@
 import configparser
 
 
-def calculate(value):
+def calculate(value: int):
     # Putting the config parser in the function allows for changes in the config without
     # having to reload the program
     config = configparser.ConfigParser()
@@ -11,7 +11,7 @@ def calculate(value):
     # By dividing 3000-2048 / 23. You get 41.39 for each Celsius change
     # 41.39 = 1C change
     # 41.39130434782609
-    if int(value) >= 2048:
+    if value >= 2048:
         val1 = value
         val2 = 2048
     else:
