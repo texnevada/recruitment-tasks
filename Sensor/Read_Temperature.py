@@ -1,11 +1,15 @@
 # Since there is no "real" temperature sensor. It makes sense to read values from random lines of the txt file
 import random
 import time
+import configparser
 
 
 def read():
-    # 100ms delay before read
-    time.sleep(0.1)
+    # Putting the config parser in the function allows for changes in the config without
+    # having to reload the program
+    config = configparser.ConfigParser()
+    config.read("./config.ini")
+    time.sleep(float(config["Sensor"]["read_speed"]))
     # Reads the temperature values
     with open("./temperature-sensor/temperature.txt") as sensor:
         # Loops until random hits 8 to simulate a temperature reader.
