@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import Sensor.Read_Temperature as Sensor
 from Sensor.Calculate_12Bit_ADC import calculate
+from Sensor.HTTP_REST import post
 import random
 import configparser
 start = time.perf_counter()
@@ -39,6 +40,7 @@ def temperature_details(seconds: int):
         "average": round(average_temp, 2)
     }
     print(json)
+    post(json)
 
 
 def main():
