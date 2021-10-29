@@ -1,7 +1,8 @@
 # What this does.
 
-This programs reads a sensor (text file) with a 2 minute collection window
-to send off to the server in a json format. This is customizable in the `config.ini` file 
+This programs reads a temperature sensor (text file) with a 2 minute collection window
+before sending this off to a server HTTP POST method with data being json format. 
+The collection time is customizable in the `config.ini` file.
 
 To run the file you need `Python 3.6 or higher`.
 
