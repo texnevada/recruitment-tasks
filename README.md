@@ -24,6 +24,6 @@ For the backend you can change urls and how often any information is to be pushe
 
 ## Challanges faced
 
-The assignment send to grab the average and use {"average": float} but
+The assignment send to grab the average and use `{"average": float}` but
 this doesn't work and results in a 400 status error. This is fixed by changing
-the json to {"avg": float}
+the json to `{"avg": float}`
