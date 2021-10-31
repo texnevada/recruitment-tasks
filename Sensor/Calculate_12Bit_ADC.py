@@ -11,13 +11,7 @@ def calculate(value: int):
     # By dividing 3000-2048 / 23. You get 41.39 for each Celsius change
     # 41.39 = 1C change
     # 41.39130434782609
-    if value >= 2048:
-        val1 = value
-        val2 = 2048
-    else:
-        val1 = 2048
-        val2 = value
-    celsius = round(float(val1-val2) / 41.39, 2)
+    celsius = round(float(value-2048) / 41.39, 2)
     fahrenheit = round((celsius * 1.8) + 32, 2)
     kelvin = round(273.15 + celsius, 2)
     # print(f"{math} Celsius")
